@@ -9,7 +9,7 @@ import random
 
 queries = {
     'trec-dl-2019': {i.query_id: i.default_text() for i in ir_datasets.load("msmarco-passage/trec-dl-2019/judged").queries_iter()},
-    'trec-dl-2020': {i.query_id: i.default_text() for i in ir_datasets.load("msmarco-passage/trec-dl-2019/judged").queries_iter()}
+    'trec-dl-2020': {i.query_id: i.default_text() for i in ir_datasets.load("msmarco-passage/trec-dl-2020/judged").queries_iter()}
 }
 
 docsstore = ir_datasets.load("msmarco-passage").docs_store()

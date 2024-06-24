@@ -13,4 +13,4 @@ Please use a prefix to easily track who is the "maintainer" of a set of runs, ri
 - `dl-20-official-...`: runs submitted to the 2020 edition of DL
 - `maik-froebe-...`: runs added by maik
 - `colbert_...`: runs added by ferdi which re-rank colbert as first stage
-- `tirex_...`: runs added by ferdi which re-rank the BM25 from tirex as first stage
+- `tirex_...`: runs added by ferdi which re-rank the initial BM25 run from tirex as first stage

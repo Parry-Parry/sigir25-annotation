@@ -1,0 +1,26 @@
+[
+  {
+    "id": 437,
+    "text": "Highly Relevant (2)",
+    "prefixKey": null,
+    "suffixKey": "2",
+    "backgroundColor": "#68BC00",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 438,
+    "text": "Relevant (1)",
+    "prefixKey": null,
+    "suffixKey": "1",
+    "backgroundColor": "#A4DD00",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 439,
+    "text": "Not Relevant (0)",
+    "prefixKey": null,
+    "suffixKey": "0",
+    "backgroundColor": "#D33115",
+    "textColor": "#ffffff"
+  }
+]

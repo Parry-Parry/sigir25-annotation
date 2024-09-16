@@ -19,7 +19,7 @@ for qrel in dataset.qrels_iter():
 
 def to_qrels(file_name):
     print(file_name)
-    with open(f'pilot-round-01/doccano/{file_name}.jsonl', 'r') as src, open(f'pilot-round-01/qrels/{file_name}-qrels.txt', 'w') as target:
+    with open(f'main/doccano/{file_name}.jsonl', 'r') as src, open(f'main/qrels/{file_name}-qrels.txt', 'w') as target:
         for l in src:
             l = json.loads(l)
             if len(l['label']) != 1:
@@ -30,7 +30,7 @@ def to_qrels(file_name):
             
 def to_ground_truth(file_name):
 
-    with open(f'pilot-round-01/doccano/{file_name}.jsonl', 'r') as src, open(f'pilot-round-01/qrels/ground-truth-qrels.txt', 'w') as target:
+    with open(f'main/doccano/{file_name}.jsonl', 'r') as src, open(f'pilot-round-01/qrels/ground-truth-qrels.txt', 'w') as target:
         for l in src:
             l = json.loads(l)
             if len(l['label']) != 1:
@@ -40,13 +40,11 @@ def to_ground_truth(file_name):
             target.write(f'{l["query_id"]} 0 {l["doc_id"]} {label}\n')
             
 
-
-
-
-
 if __name__ == '__main__':
-    for f in ['harry-scells', 'froebe', 'guglielmo-faggioli', 'andrew-parry', 'ferdinand-schlatt', 'saber-zerhoudi']: #glob('pilot-round-01/doccano/*.jsonl'):
+    for f in ['harry-scells', 'froebe', 'guglielmo-faggioli', 'andrew-parry', 'ferdinand-schlatt', 'saber-zerhoudi', 'sean-macavaney', 'eugene-yang']: #glob('pilot-round-01/doccano/*.jsonl'):
+        if not os.path.exists(f'main/doccano/{f}.jsonl'):
+            print(f'main/doccano/{f}.jsonl does not exist')
+            continue
         to_qrels(os.path.basename(f.split('.')[0]))
-    to_ground_truth('froebe')
 
 

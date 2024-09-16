@@ -24,7 +24,8 @@ def to_qrels(file_name):
             l = json.loads(l)
             if len(l['label']) != 1:
                 print(file_name, ':', l)
-                raise ValueError('Missing judgment')
+                continue
+                #raise ValueError('Missing judgment')
             label = int(l['label'][0].split('(')[1].split(')')[0])
             target.write(f'{l["query_id"]} 0 {l["doc_id"]} {label}\n')
             
@@ -35,7 +36,8 @@ def to_ground_truth(file_name):
             l = json.loads(l)
             if len(l['label']) != 1:
                 print(file_name, ':', l)
-                raise ValueError('Missing judgment')
+                continue
+                #raise ValueError('Missing judgment')
             label = qrels[l['query_id']].get(l['doc_id'], 0)
             target.write(f'{l["query_id"]} 0 {l["doc_id"]} {label}\n')
             

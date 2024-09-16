@@ -38,15 +38,9 @@ def to_ground_truth(file_name):
                 raise ValueError('Missing judgment')
             label = qrels[l['query_id']].get(l['doc_id'], 0)
             target.write(f'{l["query_id"]} 0 {l["doc_id"]} {label}\n')
-            
-
-
-
 
 
 if __name__ == '__main__':
     for f in ['harry-scells', 'froebe', 'guglielmo-faggioli', 'andrew-parry', 'ferdinand-schlatt', 'saber-zerhoudi']: #glob('pilot-round-01/doccano/*.jsonl'):
         to_qrels(os.path.basename(f.split('.')[0]))
     to_ground_truth('froebe')
-
-

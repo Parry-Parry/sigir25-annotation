@@ -25,9 +25,10 @@ def to_qrels(file_name):
             if len(l['label']) != 1:
                 print(file_name, ':', l)
                 continue
+            else:
                 #raise ValueError('Missing judgment')
-            label = int(l['label'][0].split('(')[1].split(')')[0])
-            target.write(f'{l["query_id"]} 0 {l["doc_id"]} {label}\n')
+                label = int(l['label'][0].split('(')[1].split(')')[0])
+                target.write(f'{l["query_id"]} 0 {l["doc_id"]} {label}\n')
             
 def to_ground_truth(file_name):
 

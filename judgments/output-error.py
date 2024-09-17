@@ -47,4 +47,3 @@ if __name__ == '__main__':
             print('missing:', v['missing'])
             print('duplicates:', v['duplicates'])
             print()
-        print(LOOKUP)

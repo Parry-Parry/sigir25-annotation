@@ -22,12 +22,12 @@ LOOKUP = {}
 def to_qrels(file_name):
 
     print(file_name)
-    with open(f'main/doccano/{file_name}.jsonl', 'r') as src, open(f'main/qrels/{file_name}-qrels.txt', 'w') as target:
+    with open(f'main/doccano/{file_name}.jsonl', 'r') as src:
         LOOKUP[file_name] = {
             'missing' : [], 
             'duplicates' : []
         }
-        for i, l in src:
+        for i, l in enumerate(src):
             l = json.loads(l)
             if len(l['label']) < 1:
                 LOOKUP[file_name]['missing'].append(i)

@@ -42,4 +42,9 @@ if __name__ == '__main__':
             print(f'main/doccano/{f}.jsonl does not exist')
             continue
         to_qrels(os.path.basename(f.split('.')[0]))
+        for k, v in LOOKUP.items():
+            print(k)
+            print('missing:', v['missing'])
+            print('duplicates:', v['duplicates'])
+            print()
         print(LOOKUP)

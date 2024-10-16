@@ -1,4 +1,4 @@
-# Annotation
+# Re-Annotating TREC-DL-2019
 
 Annotation project for Deep Learning Queries
 
@@ -7,10 +7,10 @@ Annotation project for Deep Learning Queries
 
 Please add new runs into the directories `runs/trec-dl-2019` (for runs passage retrieval runs for the TREC 2019 Deep Learning track) respectively to `runs/trec-dl-2020` (for runs passage retrieval runs for the TREC 2020 Deep Learning track).
 
-Please use a prefix to easily track who is the "maintainer" of a set of runs, right now, we have the following prefixes (we can later re-organize them):
+Please use a prefix to easily track who is the "maintainer" of a set of runs:
 
 - `dl-19-official-...`: runs submitted to the 2019 edition of DL
 - `dl-20-official-...`: runs submitted to the 2020 edition of DL
-- `maik-froebe-...`: runs added by maik
-- `colbert_...`: runs added by ferdi which re-rank colbert as first stage
-- `tirex_...`: runs added by ferdi which re-rank the initial BM25 run from tirex as first stage
+- `maik-froebe-...`: runs added by XX
+- `colbert_...`: runs added by XX which re-rank colbert as first stage
+- `tirex_...`: runs added by XX which re-rank the initial BM25 run from tirex as first stage

@@ -38,6 +38,7 @@ for user, narrative in USER_TO_NARRATIVE.items():
     with open(f'doccano/{user}-narrative-study.jsonl', 'w') as f:
         for l in lines:
             l['narrative'] = NARRATIVES[l['query_id']][narrative]
+            l['label'] = []
             f.write(json.dumps(l) + '\n')
 
 

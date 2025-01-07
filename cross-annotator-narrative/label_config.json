@@ -1,0 +1,34 @@
+[
+  {
+    "id": 601,
+    "text": "Not Relevant (0)",
+    "prefixKey": null,
+    "suffixKey": "0",
+    "backgroundColor": "#D33115",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 602,
+    "text": "Relevant (1)",
+    "prefixKey": null,
+    "suffixKey": "1",
+    "backgroundColor": "#68CCCA",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 603,
+    "text": "Highly Relevant (2)",
+    "prefixKey": null,
+    "suffixKey": "2",
+    "backgroundColor": "#A4DD00",
+    "textColor": "#ffffff"
+  },
+  {
+    "id": 604,
+    "text": "Perfectly Relevant (3)",
+    "prefixKey": null,
+    "suffixKey": "3",
+    "backgroundColor": "#68BC00",
+    "textColor": "#ffffff"
+  }
+]

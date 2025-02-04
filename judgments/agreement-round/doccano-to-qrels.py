@@ -25,5 +25,5 @@ def to_qrels(file_name):
                 target.write(f'{qid} 0 {docno} {qrels[qid][docno]}\n')
 
 if __name__ == '__main__':
-    for f in ['harry-scells', 'froebe', 'guglielmo-faggioli', 'andrew-parry', 'ferdinand-schlatt', 'saber-zerhoudi']:
+    for f in glob('*.jsonl'):
         to_qrels(os.path.basename(f.split('.')[0]))

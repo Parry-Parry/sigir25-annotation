@@ -2,6 +2,12 @@
 
 Annotation project for Deep Learning Queries
 
+# Project Structure
+
+- `judgements`: contains all data for main annotation studies in TREC and original JSON format. We use Doccano for all annotation.
+- `cross-annotator-narrative`: Contains judgements and code to replicate our fixed narrative setting
+- `analysis` contains notebooks which can produce all figures in the work
+
 
 # How to Add new Runs
 
